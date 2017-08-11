@@ -12,6 +12,12 @@
 		2B3C06AC1F32F28F00CCCD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06AA1F32F28F00CCCD13 /* Main.storyboard */; };
 		2B3C06AE1F32F28F00CCCD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06AD1F32F28F00CCCD13 /* Assets.xcassets */; };
 		2B3C06B11F32F28F00CCCD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06AF1F32F28F00CCCD13 /* LaunchScreen.storyboard */; };
+		2B3C06B91F32F30E00CCCD13 /* testAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06B81F32F30E00CCCD13 /* testAudio.mp3 */; };
+		2B3C06BF1F32FC6B00CCCD13 /* FDAudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C06BD1F32FC6B00CCCD13 /* FDAudioContext.swift */; };
+		2B3C06C01F32FC6B00CCCD13 /* FDWaveformRenderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C06BE1F32FC6B00CCCD13 /* FDWaveformRenderOperation.swift */; };
+		2B3C06C81F34565D00CCCD13 /* cross.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06C61F34565D00CCCD13 /* cross.wav */; };
+		2B3C06C91F34565D00CCCD13 /* f2400.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B3C06C71F34565D00CCCD13 /* f2400.wav */; };
+		2B3C06CB1F380C6800CCCD13 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C06CA1F380C6800CCCD13 /* WaveformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,13 @@
 		2B3C06AD1F32F28F00CCCD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B3C06B01F32F28F00CCCD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B3C06B21F32F28F00CCCD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3C06B81F32F30E00CCCD13 /* testAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testAudio.mp3; sourceTree = "<group>"; };
+		2B3C06BD1F32FC6B00CCCD13 /* FDAudioContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDAudioContext.swift; sourceTree = "<group>"; };
+		2B3C06BE1F32FC6B00CCCD13 /* FDWaveformRenderOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDWaveformRenderOperation.swift; sourceTree = "<group>"; };
+		2B3C06C51F34542000CCCD13 /* sample2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample2.m4a; sourceTree = "<group>"; };
+		2B3C06C61F34565D00CCCD13 /* cross.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cross.wav; sourceTree = "<group>"; };
+		2B3C06C71F34565D00CCCD13 /* f2400.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = f2400.wav; sourceTree = "<group>"; };
+		2B3C06CA1F380C6800CCCD13 /* WaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +67,29 @@
 		2B3C06A51F32F28F00CCCD13 /* WaveformView */ = {
 			isa = PBXGroup;
 			children = (
+				2B3C06CC1F385A5200CCCD13 /* audio source */,
 				2B3C06A61F32F28F00CCCD13 /* AppDelegate.swift */,
 				2B3C06A81F32F28F00CCCD13 /* ViewController.swift */,
+				2B3C06CA1F380C6800CCCD13 /* WaveformView.swift */,
+				2B3C06BD1F32FC6B00CCCD13 /* FDAudioContext.swift */,
+				2B3C06BE1F32FC6B00CCCD13 /* FDWaveformRenderOperation.swift */,
 				2B3C06AA1F32F28F00CCCD13 /* Main.storyboard */,
-				2B3C06AD1F32F28F00CCCD13 /* Assets.xcassets */,
 				2B3C06AF1F32F28F00CCCD13 /* LaunchScreen.storyboard */,
+				2B3C06AD1F32F28F00CCCD13 /* Assets.xcassets */,
 				2B3C06B21F32F28F00CCCD13 /* Info.plist */,
 			);
 			path = WaveformView;
+			sourceTree = "<group>";
+		};
+		2B3C06CC1F385A5200CCCD13 /* audio source */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C06C51F34542000CCCD13 /* sample2.m4a */,
+				2B3C06C61F34565D00CCCD13 /* cross.wav */,
+				2B3C06C71F34565D00CCCD13 /* f2400.wav */,
+				2B3C06B81F32F30E00CCCD13 /* testAudio.mp3 */,
+			);
+			name = "audio source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3C06B11F32F28F00CCCD13 /* LaunchScreen.storyboard in Resources */,
+				2B3C06C91F34565D00CCCD13 /* f2400.wav in Resources */,
+				2B3C06C81F34565D00CCCD13 /* cross.wav in Resources */,
+				2B3C06B91F32F30E00CCCD13 /* testAudio.mp3 in Resources */,
 				2B3C06AE1F32F28F00CCCD13 /* Assets.xcassets in Resources */,
 				2B3C06AC1F32F28F00CCCD13 /* Main.storyboard in Resources */,
 			);
@@ -137,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3C06BF1F32FC6B00CCCD13 /* FDAudioContext.swift in Sources */,
+				2B3C06C01F32FC6B00CCCD13 /* FDWaveformRenderOperation.swift in Sources */,
 				2B3C06A91F32F28F00CCCD13 /* ViewController.swift in Sources */,
 				2B3C06A71F32F28F00CCCD13 /* AppDelegate.swift in Sources */,
+				2B3C06CB1F380C6800CCCD13 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
